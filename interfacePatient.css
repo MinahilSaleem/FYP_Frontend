@@ -1,0 +1,727 @@
+:root{
+    --hover:#333333;
+    --theme-color:#00437B;
+    --content:white;
+    --footer-bg:#222222;
+    --profile-content:#525252;
+    --btn-red:rgb(202, 34, 34);
+    --btn-green:rgb(5, 116, 53);
+    --box-shadow:#21232f;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'poppin' , sans-serif;
+}
+
+/* .container,p,h1,h2,h3,h4,.patient ul,.patient li,.patient a,.side-profile,.edit-profile,.sub-menu-wrap{
+    background-color: var(--footer-bg);
+    --box-shadow:white;
+    color: var(--content);
+} */
+/* header  */
+
+.header {
+    z-index: 10;
+    background-color: var(--theme-color);
+    /* background-color: #FFFFFF; */
+    /* border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px; */
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.header .logo {
+    height: 100px;
+    width: auto;
+    margin-left: 50px;
+}
+ /* drop down profile  */
+.header .user-pic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+.header .user-pic:hover{
+    transform: scale(0.95);
+}
+.sub-menu-wrap{
+    position: absolute;
+    top: 90%;
+    right: 0.7%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.sub-menu-wrap.open-menu{
+    max-height: 400px;
+}
+.sub-menu-wrap .sub-menu{
+    background: var(--content);
+    box-shadow: 0 0 6px var(--box-shadow);
+    padding: 20px;
+    margin: 10px;    
+}
+
+.sub-menu-wrap .sub-menu .user-info{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    
+}
+
+.sub-menu-wrap .sub-menu .user-info h3{
+    font-weight: 500;
+}
+
+.sub-menu-wrap .sub-menu .user-info img{
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.sub-menu-wrap .sub-menu hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+
+.sub-menu-wrap .sub-menu .sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 12px 0; 
+    color: var(--profile-content);
+}
+
+.sub-menu-wrap .sub-menu .sub-menu-link p{
+    width: 100%;
+}
+
+.sub-menu-wrap .sub-menu .sub-menu-link img{
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+
+.sub-menu-wrap .sub-menu .sub-menu-link span{
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+
+.sub-menu-wrap .sub-menu .sub-menu-link:hover span{
+    transform: translateX(5px);
+}
+
+.sub-menu-wrap .sub-menu .sub-menu-link:hover p{
+    font-weight: 600;
+}
+
+/* side profile  */
+
+.side-profile{
+    background: var(--content);
+    width: 25vw;
+    height: 83vh;
+    z-index: 9;
+    box-shadow: 0 0 6px var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.7s;
+}
+
+.side-profile.open-profile{
+    max-height: 700px;
+    position: fixed;
+}
+
+.side-profile .intro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.side-profile .intro img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+
+}
+
+.side-profile .intro h3{
+    color: var(--profile-content);
+}
+
+.side-profile hr{
+    border: 0;
+    height: 2px;
+    width: 80%;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+
+.side-profile .intro .status{
+    margin-top: 8px;
+    text-align: center;
+    color: var(--profile-content);
+    font-size: 18px;
+}
+
+.side-profile .intro .status p{
+    margin-bottom: 7px;
+}
+.side-profile .profile-patients{
+    overflow: auto;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.side-profile .my-patients{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 6px var(--box-shadow);
+    width: 20vw;
+}
+
+.side-profile .my-patients img{
+    height: 70px;
+    width: auto;
+}
+
+.side-profile .profile-patients h4{
+    margin-right: 35px;
+    color: var(--profile-content);
+}
+/* navigation bar/header */
+
+.header .nav-bar {
+    list-style-type: none;
+    float: left;
+}
+
+.header .nav-bar li {
+    /* margin-top: 10px; */
+    list-style-type: none;
+    padding: 7px;
+    float: left;
+}
+
+.header .nav-bar li:hover{
+    background-color: var(--hover);
+    
+}
+
+.header .nav-bar a {
+    text-decoration: none;
+    color: var(--content);
+    font-size: 20px;
+    padding: 15px;
+    margin: 6px;
+    border: hidden;
+    border-radius: 5px;
+    /* background-color:aqua; */
+}
+
+.patients{
+
+    display: flex;
+    align-items: center;
+    /* margin-top: 100px; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+ h2{
+    margin-top: 30px;
+    text-align: center;
+    color: var(--theme-color);
+    font-size: 40px;
+}
+
+
+/* edit profile  */
+.edit-profile{
+    background: var(--content);
+    width: 100vw;
+    height: 83vh;
+    z-index: 8;
+    box-shadow: 0 0 6px var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.7s;
+}
+
+.edit-profile.open-profile{
+    max-height: 700px;
+    position: fixed;
+}
+
+.edit-profile h3{
+    color: var(--theme-color);
+    font-size: 25px;
+}
+
+.edit-profile .edit-data{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.edit-profile .img-upload{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-profile .img-upload img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+.edit-profile .img-upload label{
+    display: block;
+    width: 200px;
+    text-align: center;
+    background: var(--theme-color);
+    color: var(--content);
+    padding: 12px;
+    margin: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.edit-profile .img-upload input[type="file"]{
+    display: none;
+}
+
+.edit-profile .edit-fields{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-profile .edit-fields label{
+    opacity: 0.8;
+}
+
+.input-name, .input-specialization, .input-status, .input-email, .input-password, .input-Pno{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.edit-profile .edit-fields input[type="text"] ,.edit-profile .edit-fields input[type="email"] ,.edit-profile .edit-fields input[type="password"]{
+    padding: 7px 7px;
+    width: 60%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--profile-content);
+    margin-bottom: 5px;
+
+}
+.edit-profile .edit-fields input[type="radio"]{
+    accent-color: var(--theme-color);
+    margin: 20px 5px 20px 20px;
+}
+
+.edit-profile .edit-fields .input-experience option , .edit-profile .edit-fields .input-experience select{
+    background-color: var(--content);
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid var(--theme-color);
+    color: var(--theme-color);
+}
+.edit-profile hr{
+    border: 0;
+    height: 100%;
+    width: 2px;
+    background: #ccc;
+    /* margin: 5px 0 5px; */
+}
+
+.edit-profile .vertical-line {
+    border-left: 2px solid #ccc;
+    height: 400px; 
+    margin: 0 20px; 
+  }
+  
+.edit-profile .profile-patients{
+    display: flex;
+    height: 100%;
+    overflow: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.edit-profile .profile-patients h4{
+    margin-right: 35px;
+    color: var(--profile-content);
+}
+
+.edit-profile .profile-patients .my-patients{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 6px var(--box-shadow);
+    width: 20vw;
+}
+
+.edit-profile .profile-patients .my-patients img{
+    height: 70px;
+    width: auto;
+}
+
+.edit-profile .profile-patients .my-patients .patient-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.edit-profile .profile-patients .my-patients .patient-name i{
+    background-color: var(--btn-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 45px;
+    margin-right: 2px;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.edit-profile .profile-patients .my-patients .patient-name h4{
+    margin-right: 35px;
+    color: var(--profile-content);
+}
+
+/* logout alert  */
+.logout{
+    display: flex;
+    z-index: 9;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 83vh;
+    width: 100vw;
+    max-height: 0px;
+    /* max-width: 0px; */
+    overflow: hidden;
+    backdrop-filter: blur(12x);
+}
+
+.logout.show-logout{
+    max-height: 100vh;
+    position: fixed;
+    backdrop-filter: blur(2px);
+}
+.logout .logout-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 150px;
+    background: var(--content);
+    width: 40vw;
+    height: 50vh;
+    box-shadow: 0 0 6px var(--box-shadow);
+
+}
+
+.logout .logout-confirmation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+.logout .logout-confirmation p{
+    color: var(--profile-content);
+    font-size: 18px;
+}
+.logout .logout-confirmation .logout-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.logout .logout-confirmation .logout-btn a{
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    padding: 12px 30px;
+    box-shadow: 0 0 6px var(--box-shadow);
+}
+
+.logout .logout-confirmation .logout-btn a:hover{
+    transform: scale(0.95);
+}
+.logout .logout-confirmation .logout-btn a i{
+    color: var(--content);
+    font-size: 15px;
+}
+.logout .logout-confirmation .logout-btn .first-btn{
+    background: var(--btn-green);
+    color: var(--content);
+    font-size: 12px;
+}
+
+.logout .logout-confirmation .logout-btn .second-btn{
+    background: var(--btn-red);
+    color: var(--content);
+    font-size: 12px;
+}
+/* interface layout  */
+.patients .patient{
+    margin-bottom: 60px;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px var(--box-shadow);
+    overflow: hidden;
+}
+
+.patients .patient .patient-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.patients .patient .patient-name i{
+    background-color: var(--btn-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-right: 8px;
+    color: white;
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    border-radius: 50%;
+}
+.patients .patient img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.2s ease-in-out;
+}
+.patients .patient:hover img{
+    opacity: 0.8;
+}
+.patients .patient a, .patients .patient .readMore,.patients .patient .symptoms{
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize;
+}
+.patients .patient hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+
+.patients .patient .symptoms{
+    font-size: 16px;
+}
+
+.patients .patient .readMore{
+    font-size: 15px;
+    color: var(--theme-color);
+}
+
+
+
+/* footer screen  */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    background: var(--footer-bg);
+    height: 40vh;
+}
+.footer .footer-head{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.footer .footer-head a {
+    text-decoration: none;
+    color: var(--theme-color);
+    font-size: 15px;
+
+}
+.footer .footer-head a p i{
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.footer .footer-head a p{
+    color: var(--content);
+}
+.footer .footer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 300px;
+}
+
+.footer .footer-content .footer-logo img{
+    height: 100px;
+    width: auto;
+}
+
+
+.footer .footer-privacy{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+
+.footer .footer-privacy a{
+    text-decoration: none;
+    color: var(--content);
+    font-size: 13px;
+
+}
+
+.footer .footer-icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer .footer-icons h3{
+    position: relative;
+    color: var(--content);
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    
+}
+.footer .footer-icons h3:after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    background: var(--content);
+    bottom: 0;
+    left: 0;
+}
+
+.footer .footer-icons .footer-links a i{
+    text-decoration: none;
+    background: var(--content);
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.footer .footer-icons .footer-links a i:hover{
+    transform: scale(0.95);
+}
+ 
+
+.footer .footer-copyright p{
+    color: #777777;
+    font-size: 14px;
+}
+
+/* scroll to the top button  */
+.to-top{
+    background: var(--theme-color);
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    padding: 8px 0px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: var(--content);
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-top:hover{
+    transform: scale(0.9);
+}
+
+.to-top.active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+

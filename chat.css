@@ -1,0 +1,261 @@
+:root{
+    --bg-color:#19396F;
+    --head:#2F4974;
+    --theme-color:#0043b7;
+    --bg-dark-gray:#525761;
+    --send-msg:#78E08F;
+    --msg:#82CCDD;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background: linear-gradient(to right, white,  #576c91, #0043b7);
+
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    transform-origin:  bottom right;
+    gap: 30px;
+    max-width: 0px;
+    transition: all 0.5s ease;
+    /* display: none; */
+ 
+}
+.container.hide{
+    /* display: none; */
+    max-width: 1400px;
+}
+.container .contacts{
+    margin: 60px 0 40px 170px;
+    height: 78vh;
+    width: 23vw;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: var(--bg-color);
+}
+
+/* contact head with input search btn  */
+
+.contacts .contacts-head{
+    background-color:var(--head) ;
+    padding: 7px;
+    position: relative;
+}
+.contacts .contacts-head .input-search{
+    padding: 5px 10px 12px 10px;
+}
+
+.contacts .contacts-head .input-search .input-feild input{
+    padding: 10px 12px ;
+    margin: 2px;
+    width: 100%;
+    background-color: var(--bg-dark-gray);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 14px;
+}
+
+.contacts .contacts-head .input-search .input-feild input::placeholder{
+    color:#6C757D;
+    font-size: 18px;
+}
+
+
+.contacts .contacts-head .input-search .search-btn i{
+    color: white;
+    position: absolute;
+    top: 36%;
+    right: 10%;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+/* contact body  */
+.container .contacts .contacts-body{
+    background-color: var(--bg-color);
+    overflow-y: scroll;
+    max-height: 63vh;
+}
+
+.container .contacts .contacts-body ul{
+    text-decoration: none;
+}
+
+.container .contacts .contacts-body ul .contact{
+     display: flex;
+     flex-direction: row;
+     padding: 15px 20px;
+     gap: 30px;
+     /* justify-content: center; */
+     align-items: center;
+}
+
+.container .contacts .contacts-body ul .active{
+    background-color: #4F5662;
+}
+
+.container .contacts .contacts-body ul .contact .contact-img img{
+    height: 60px;
+    width: 60px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.container .contacts .contacts-body ul .contact .contact-info p{
+    color: white;
+    font-size: 19px;
+}
+
+.container .contacts .contacts-footer{
+    background-color: var(--bg-color);
+    padding: 40px;
+}
+
+/* main chat box  */
+.container .main{
+    margin: 60px 0 ;
+    height: 78vh;
+    width: 50vw;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: var(--bg-color);
+
+}
+/* head having profile info  */
+.container .main .main-head{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    background-color: var(--head);
+}
+
+.container .main .main-head img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.container .main .main-head p{
+    color: white;
+    font-size: 22px;
+}
+
+.container .main .main-head .main-head-btns{
+    margin-left: 290px;
+}
+
+.container .main .main-head .main-head-btns i{
+    font-size: 20px;
+    margin-left: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+/* main body having chat box  */
+
+.container .main .main-body{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+.container .main .main-body .message{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.container .main .main-body .send{
+    margin-left: auto;
+}
+
+.container .main .main-body .send p{
+    z-index: 3;
+    background-color: var(--send-msg); 
+
+}
+
+.container .main .main-body .message .msg-photo img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.container .main .main-body .message p{
+    border-radius: 40px;
+    padding: 14px;
+    width: fit-content;
+}
+
+.container .main .main-body .receive p{
+    background-color: var(--msg);
+    z-index: 2;
+}
+/* footer hanving message typing section  */
+.container .main .main-footer{
+    margin: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .main .main-footer textarea{
+    padding: 0px;
+    color: white;
+    background-color: var(--bg-dark-gray);
+    border: none;
+    outline: none;
+}
+
+.container .main .main-footer textarea::placeholder{
+    color:#6C757D;
+    padding-top: 20px ;
+    font-size: 15px;
+}
+
+/* attachment btn  */
+.container .main .main-footer .fa-paperclip{
+    color: white;
+    background-color: var(--bg-dark-gray);
+    padding:  22px;
+    cursor: pointer;
+    border-radius: 40px 0 0 40px;
+}
+
+/* send btn  */
+.container .main .main-footer .fa-paper-plane{
+    color: white;
+    background-color: var(--bg-dark-gray);
+    padding:  22px;
+    cursor: pointer;
+    border-radius: 0 40px 40px 0;
+}
+
+.fa-plus{
+    position: absolute;
+    left: 5%;
+    bottom: 4%;
+    cursor: pointer;
+    padding: 20px;
+    background-color: #0e1f3b;
+    color: white;
+    font-size: 23px;
+    border-radius: 50%;
+}
+.fa-plus.rotate{
+    transform: rotate(45deg);
+    transition:  all 0.5s ease;
+}

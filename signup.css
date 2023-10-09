@@ -1,0 +1,164 @@
+:root{
+    --cyan: #00437b;
+    --white: white;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.outer{
+    background-color: var(--white);
+    display: flex;
+    height: 100vh;
+    
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+    height: 100vh;
+    box-shadow: 19px 7px 55px 0px rgba(0,0,0,0.75);
+    width: 60%;
+    /* background-color: aquamarine; */
+    height:600px;
+    display: flex;
+    
+}
+.image-container img{
+    height: 300px;
+    width: 400px;
+
+}
+
+
+
+/* right side */
+
+
+.container .view{
+
+  background-color: var(--cyan);
+   width:400px;
+   height:600px;
+   display: flex;
+   flex-direction: column;
+   align-items: center; 
+   text-align: center;
+   color: var(--white); 
+}
+.container .view h2{
+    
+    padding-top: 27%;
+}
+.container .view p{
+
+    padding:14px ;
+    width: 45%;
+ 
+}
+
+.container .page{
+    background-color: var(--white);
+    width: 82%;
+    height: 73.3%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left:60px;
+    padding-right:20px;
+}
+
+.page p{
+    padding-top: 20px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    
+}
+.input-container {
+    position: relative;
+}
+
+.input-icon {
+    padding-top: 20px;
+    position: absolute;
+    left: 10px;
+    top: 60%;
+    bottom: 10px;
+    transform: translateY(-50%); 
+}
+
+.input-field {
+    /* padding-left: 30px;  */
+    width: 90%; 
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+  
+} 
+.input-select{
+    /* margin-left: 20px; */
+    width: 96%;
+}
+.end{
+    display: flex;
+    
+}
+
+button{
+    border:1px solid;
+    padding: 10px;
+    width: 110px;
+    border-radius: 22px;
+    margin: 20px;
+    font-size: large;
+    color: white ;
+    background-color: var( --cyan);
+    border-color:  var( --cyan);
+}
+button:hover {
+
+   transform: scale(0.95);
+    cursor: pointer;
+    
+}
+.end input{
+    margin-top: 18px;
+}
+input[type="checkbox"]{
+    accent-color: var(--cyan);
+}
+.end{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 7px;
+}
+.end span{
+    padding: 10px;
+    font-size: 16PX;
+    color:var(--cyan);
+}
+.end p{
+    font-size: 16px;
+}
+.end p a {
+    text-decoration: none;
+    color: var(--cyan);
+}
+.btn{
+    display: flex;
+    
+}
+.btn a,.btn span{
+    text-decoration: none;
+    margin-top: 30px;
+    font-size: 18px;
+}
+.btn a{
+    color:var(--cyan);
+}
+

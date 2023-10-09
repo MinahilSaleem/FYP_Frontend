@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychologist Interface</title>
+    <link rel="icon" href="./Assets/IMAGES/VT logo.jpg">
+    <link rel="stylesheet" href="./Assets/interfacePatient.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header" >
+            <a href="./virtual therapy.html">
+                <img class="logo" src="./Assets/IMAGES/logo.png" alt="">
+            </a>
+            <ul class="nav-bar">
+                <li><a href="./virtual therapy.html#home">Home</a></li>
+                <li><a href="./virtual therapy.html#about">About us</a></li>
+                <li><a href="./virtual therapy.html#blog">Blog</a></li>
+                <li><a href="./virtual therapy.html#footer">Contact us</a></li>
+                <li><a href="">Chat</a></li>
+                <li><a class="signup" href="./signup page.html">Sign up</a></li>
+                <li><a href="./login page.html">Login</a></li>
+            </ul>
+        <!-- drop down profile  -->
+
+            <img class="user-pic" src="./Assets/IMAGES/user.png" onclick="toggleMenu()">
+
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info" id="user-info" >
+                        <img src="./Assets/IMAGES/user.png" alt="">
+                        <h3>Unknown</h3>
+                    </div>
+                    <hr>
+
+                    <a href="#" class="sub-menu-link" id="edit-btn">
+                        <img src="./Assets/IMAGES/profile.png" alt="">
+                        <p>Edit Profile</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="./Assets/IMAGES/setting.png" alt="">
+                        <p>Settings & Privacy</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="./Assets/IMAGES/help.png" alt="">
+                        <p>Help & Support</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link" id="logout-btn">
+                        <img src="./Assets/IMAGES/logout.png" alt="">
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- side profile  -->
+        <aside class="side-profile" id="side-profile">
+           <div class="intro">
+                <img src="./Assets/IMAGES/user.png" alt="">
+                <h3>Unknown</h3>
+                <div class="status">
+                    <p>Clinical Psychologist</p>
+                    <p>Messages only</p>
+                    <p>unknown@gmail.com</p>
+                    <p><strong>Experience:</strong> 3 - 4 years</p>
+                    <p>+92 300 - 1234567</p>
+                </div>
+           </div>
+           
+           <hr>
+
+            <div class="profile-patients">
+                <h4>My Patients</h4>
+                <div class="my-patients">
+                    <img src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM=" alt="">
+                    <h4>Cristy Adam</h4>
+                </div>
+                <div class="my-patients">
+                    <img src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM=" alt="">
+                    <h4>Cristy Adam</h4>
+                </div>
+                <div class="my-patients">
+                    <img src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM=" alt="">
+                    <h4>Cristy Adam</h4>
+                </div>
+
+            </div>
+        </aside>
+        <!-- edit profile side  -->
+        <aside class="edit-profile" id="edit-profile">
+            <h3>Edit Your Profile</h3>
+               <div class="edit-data">
+                    <div class="img-upload">
+                                <img src="./Assets/IMAGES/user.png" id="upload-pic">
+                                <label for="input-file">Change image</label>
+                                <input type="file" accept="image/jpg, image/ipeg, image/png" id="input-file">           
+                    </div>
+                    <form class="edit-fields">
+                                <div class="input-name">
+                                    <label for="">Name:</label><input type="text">
+                                </div>
+                                <div class="input-specialization">
+                                    <label for="">Specialization:</label><input type="text">
+                                </div>
+                                <div class="input-status">
+                                    <label for="">Status/Bio:</label><input type="text">
+                                </div>
+                                <div class="input-email">
+                                    <label for="">E-mail:</label><input type="email">
+                                </div>
+                                <div class="input-password">
+                                    <label for="">Password:</label><input type="password">
+                                </div>
+                                <div class="input-Pno">
+                                    <label for="">Phone No. :</label><input type="text">
+                                </div>
+                                <div class="input-gender">
+                                    <label for="">Gender:</label>
+                                    <input name="gender" type="radio"><label for="">Male</label>
+                                    <input name="gender" type="radio"><label for="">Female</label>
+                                </div>
+                                <div class="input-experience">
+                                    <label for="">Experience:</label>
+                                    <select name="" id="">
+                                        <option value="">1 - 2 YEARS</option>
+                                        <option value="">3 - 4 YEARS</option>
+                                        <option value="">5 - 6 YEARS</option>
+                                        <option value="">7 - 8 YEARS</option>
+                                    </select>
+                                </div>
+                     </form>
+                    <hr>
+                    <!-- <div class="vertical-line"></div> -->
+                    <div class="profile-patients">
+                        <h4>My Patients</h4>
+                        <div class="my-patients">
+                            <img src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM=" alt="">
+                            <div class="patient-name">
+                                <h4>Cristy Adam</h4>
+                                <i class="fa-solid fa-minus"></i>
+                                <!-- <i class="fa-solid fa-xmark" ></i> -->
+                            </div>
+                        </div>
+                        <div class="my-patients">
+                            <img src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM=" alt="">
+                            <div class="patient-name">
+                                <h4>Cristy Adam</h4>
+                                <i class="fa-solid fa-minus"></i>
+                                <!-- <i class="fa-solid fa-xmark" ></i> -->
+                            </div>
+                        </div>
+                        <div class="my-patients">
+                            <img src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM=" alt="">
+                            <div class="patient-name">
+                                <h4>Cristy Adam</h4>
+                                <i class="fa-solid fa-minus"></i>
+                                <!-- <i class="fa-solid fa-xmark" ></i> -->
+                            </div>
+                        </div>
+                    
+                    </div>
+               </div>
+        </aside>
+        
+        <!-- logout alert  -->
+        <div class="logout" id="logout">
+            <div class="logout-content">
+                <div class="logout-confirmation">
+                    <p>Do you really want to logout?</p>
+                    <div class="logout-btn">
+                        <a class="first-btn"><i class="fa-solid fa-right-from-bracket"></i> LOGOUT</a>
+                        <a class="second-btn"><i class="fa-solid fa-xmark"></i> CANCEL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- patient in blocks  -->
+        <h2>Meet New Patients</h2>
+        <div class="patients">
+            <div class="patient">
+                
+                <img src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM=">
+                <div class="patient-name">
+                    <a href="#" target="_blank">Cristy Adam</a>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <hr>
+                <a class="symptoms" href="">
+                    <h4>Symptoms:</h4>
+                    <p>
+                        <ul>
+                            <li>Anxiety</li>
+                            <li>Less sleep</li>
+                            <li>Restless Mind</li>
+                            <a class="readMore" href="">Read More   <i class="fa-solid fa-chevron-right" style="color: #00437b;"></i></a>
+                        </ul>
+                    </p>
+                </a>
+            </div>
+            <div class="patient">
+                <img src="https://learn-attachment.microsoft.com/api/attachments/209536-360-f-364211147-1qglvxv1tcq0ohz3fawufrtonzz8nq3e.jpg?platform=QnA">
+                <div class="patient-name">
+                    <a href="#" target="_blank">Cristy Adam</a>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <hr>
+                <a class="symptoms" href="">
+                    <h4>Symptoms:</h4>
+                    <p>
+                        <ul>
+                            <li>Anxiety</li>
+                            <li>Less sleep</li>
+                            <li>Restless Mind</li>
+                            <a class="readMore" href="">Read More   <i class="fa-solid fa-chevron-right" style="color: #00437b;"></i></a>
+                        </ul>
+                    </p>
+                </a>
+            </div>
+            <div class="patient">
+                <img src="./Assets/IMAGES/remi-turcotte-usSV8umsRDA-unsplash.jpg">
+                <div class="patient-name">
+                    <a href="#" target="_blank">Cristy Adam</a>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <hr>
+                <a class="symptoms" href="">
+                    <h4>Symptoms:</h4>
+                    <p>
+                        <ul>
+                            <li>Anxiety</li>
+                            <li>Less sleep</li>
+                            <li>Restless Mind</li>
+                            <a class="readMore" href="">Read More   <i class="fa-solid fa-chevron-right" style="color: #00437b;"></i></a>
+                        </ul>
+                    </p>
+                </a>
+            </div>
+
+            <div class="patient">
+                
+                <img src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM=">
+                <div class="patient-name">
+                    <a href="#" target="_blank">Cristy Adam</a>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <hr>
+                <a class="symptoms" href="">
+                    <h4>Symptoms:</h4>
+                    <p>
+                        <ul>
+                            <li>Anxiety</li>
+                            <li>Less sleep</li>
+                            <li>Restless Mind</li>
+                            <a class="readMore" href="">Read More   <i class="fa-solid fa-chevron-right" style="color: #00437b;"></i></a>
+                        </ul>
+                    </p>
+                </a>
+            </div>
+            <div class="patient">
+                <img src="https://learn-attachment.microsoft.com/api/attachments/209536-360-f-364211147-1qglvxv1tcq0ohz3fawufrtonzz8nq3e.jpg?platform=QnA">
+                <div class="patient-name">
+                    <a href="#" target="_blank">Cristy Adam</a>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <hr>
+                <a class="symptoms" href="">
+                    <h4>Symptoms:</h4>
+                    <p>
+                        <ul>
+                            <li>Anxiety</li>
+                            <li>Less sleep</li>
+                            <li>Restless Mind</li>
+                            <a class="readMore" href="">Read More   <i class="fa-solid fa-chevron-right" style="color: #00437b;"></i></a>
+                        </ul>
+                    </p>
+                </a>
+            </div>
+            <div class="patient">
+                <img src="./Assets/IMAGES/remi-turcotte-usSV8umsRDA-unsplash.jpg">
+                <div class="patient-name">
+                    <a href="#" target="_blank">Cristy Adam</a>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <hr>
+                <a class="symptoms" href="">
+                    <h4>Symptoms:</h4>
+                    <p>
+                        <ul>
+                            <li>Anxiety</li>
+                            <li>Less sleep</li>
+                            <li>Restless Mind</li>
+                            <a class="readMore" href="">Read More   <i class="fa-solid fa-chevron-right" style="color: #00437b;"></i></a>
+                        </ul>
+                    </p>
+                </a>
+            </div>
+
+            <div class="patient">
+                
+                <img src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM=">
+                <div class="patient-name">
+                    <a href="#" target="_blank">Cristy Adam</a>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <hr>
+                <a class="symptoms" href="">
+                    <h4>Symptoms:</h4>
+                    <p>
+                        <ul>
+                            <li>Anxiety</li>
+                            <li>Less sleep</li>
+                            <li>Restless Mind</li>
+                            <a class="readMore" href="">Read More   <i class="fa-solid fa-chevron-right" style="color: #00437b;"></i></a>
+                        </ul>
+                    </p>
+                </a>
+            </div>
+            <div class="patient">
+                <img src="https://learn-attachment.microsoft.com/api/attachments/209536-360-f-364211147-1qglvxv1tcq0ohz3fawufrtonzz8nq3e.jpg?platform=QnA">
+                <div class="patient-name">
+                    <a href="#" target="_blank">Cristy Adam</a>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <hr>
+                <a class="symptoms" href="">
+                    <h4>Symptoms:</h4>
+                    <p>
+                        <ul>
+                            <li>Anxiety</li>
+                            <li>Less sleep</li>
+                            <li>Restless Mind</li>
+                            <a class="readMore" href="">Read More   <i class="fa-solid fa-chevron-right" style="color: #00437b;"></i></a>
+                        </ul>
+                    </p>
+                </a>
+            </div>
+            <div class="patient">
+                <img src="./Assets/IMAGES/remi-turcotte-usSV8umsRDA-unsplash.jpg">
+                <div class="patient-name">
+                    <a href="#" target="_blank">Cristy Adam</a>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <hr>
+                <a class="symptoms" href="">
+                    <h4>Symptoms:</h4>
+                    <p>
+                        <ul>
+                            <li>Anxiety</li>
+                            <li>Less sleep</li>
+                            <li>Restless Mind</li>
+                            <a class="readMore" href="">Read More   <i class="fa-solid fa-chevron-right" style="color: #00437b;"></i></a>
+                        </ul>
+                    </p>
+                </a>
+            </div>
+
+            
+        </div>
+        <!-- footer  -->
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-head">
+                    <div class="footer-logo">
+                        <img src="./Assets/IMAGES/logo.png" alt="">
+                    </div>
+                    <a href="">
+                        <p><i class="fa-regular fa-envelope" style="color: #00437b;"></i>VirtualTherapy@gmail.com</p>
+                    </a>
+                </div>
+                <div class="footer-privacy">
+                    <a href="">
+                        <p>Privacy Policy</p>
+                    </a>
+                    <a href="">
+                        <p>Terms and Conditions</p>
+                    </a>
+                </div>
+                <div class="footer-icons">
+                    <h3>Contact With Us</h3>
+                    <div class="footer-links">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook" style="color: #00437b;"></i></a>
+                        <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter" style="color: #00437b;"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube" style="color: #00437b;"></i></a>
+                
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>Site Designed & Developed by TrafficHub. Copyright © 2023 Virtual Therapy.</p>
+            </div>
+        </div>
+        <!-- scroll to the top button  -->
+        <a href="#" class="to-top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <script src="https://kit.fontawesome.com/567f26b585.js" crossorigin="anonymous"></script>
+
+    <script src="./Assets/JS attachments/interfacepatient.js"></script>
+</body>
+</html>
